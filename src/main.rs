@@ -17,8 +17,6 @@ const ITEMS: usize = 5;
 fn main() -> Result<()> {
     let args = Arguments::from_args();
     let today = Local::today();
-    let today = today.with_month(12).context("nope")?;
-    let today = today.with_day(20).context("nope")?;
     let year = today.year();
 
     let mut cache = DataCache::init(args.locale.clone())?;
